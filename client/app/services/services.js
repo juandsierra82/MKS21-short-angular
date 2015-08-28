@@ -22,7 +22,6 @@ angular.module('shortly.services', [])
 
   }
 
-
   return {
     getLinks: getLinks,
     addLink : addLink

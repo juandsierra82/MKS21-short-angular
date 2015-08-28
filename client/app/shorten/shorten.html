@@ -1,6 +1,10 @@
 <div id='container'>
 <!-- Your code here -->
   {{ $scope.addLink(null) }}
+  <form ng-submit="addLink(link)">
+    <input type="url" ng-model="link.url" placeholder="Enter URL">
+    <button>Submit</button>
+  </form>
 </div>
 
 

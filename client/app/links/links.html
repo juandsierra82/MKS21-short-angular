@@ -1,5 +1,8 @@
 <div id='container'>
-{{ $scope.getLinks() }}
-  <!-- Your html here -->
-
+  <ul>
+    <li class="link" ng-repeat="link in data.links">
+      <a href="{{ link.url }}" class="title">{{ link.title }}</a>
+      <span class="vists">{{ link.visits }}</span>
+    </li>
+  </ul>
 </div>
