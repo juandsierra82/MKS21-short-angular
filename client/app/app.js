@@ -25,6 +25,11 @@ angular.module('shortly', [
       controller: 'ShortenController',
       authenticate: true
     })
+    .otherwise({
+      templateUrl: 'app/links/links.html',
+      controller: 'LinksController',
+      authenticate: true
+    })
     // Your code here
 
     // We add our $httpInterceptor into the array

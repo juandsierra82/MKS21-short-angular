@@ -1,6 +1,17 @@
 <div id='container'>
+  <div class="navigation">
+    <ul>
+    <li><a href="/#/shorten">Shorten</a></li>
+    <li><a href="/#/links">Links</a></li>
+    <li><a href="/#/signin" ng-click="signout()">Logout</a></li>
+    <li></li>
+    </ul>
+  </div>
+  <div class="search">
+    <input type="text" placeholder="Search Links" ng-model="search">
+  </div>
   <ul>
-    <li class="link" ng-repeat="link in data.links">
+    <li class="link" ng-repeat="link in data.links | filter:search : orderBy:'-visits'">
       <a href="{{ '/api/links/' + link.code }}" class="title">{{ link.title }}</a>
       <span class="vists">{{ link.visits }}</span>
     </li>
